@@ -26,17 +26,46 @@ export const H1 = styled.h1`
 
 export const Div = styled.div`
 	margin-top: 0.5rem;
+	padding: 1rem 0.5rem 0rem 0.5rem;
+	background-color: #f4f4f4;
+	border-bottom: 1px solid #666;
+	height: 2rem;
+`;
+
+export const Label = styled.p`
+	display: inline;
+	position: absolute;
+	height: 3rem;
+	font-size: 0.9rem;
+	font-weight: 100;
+	margin-top: 0rem;
+	color: darkgray;
+
+	&:hover {
+		margin-top: -0.6rem;
+		font-size: 0.8rem;
+		transition: 300ms ease-out;
+		color: grey;
+	}
 `;
 
 export const Input = styled.input`
-	display: block;
-	width: 92%;
-	height: 2.5rem;
-	margin-top: 0.8rem;
+	display: inline-block;
+	width: 98%;
+	height: 1rem;
 	background-color: #f4f4f4;
 	border: none;
-	border-bottom: 1px solid #666;
-	padding-left: 1rem;
+
+	&::placeholder {
+		color: blue;
+	}
+
+	&:focus::placeholder {
+		font-size: 0.7rem;
+		margin-bottom: 2rem;
+		color: red;
+		transition: 300ms ease-out;
+	}
 `;
 
 export const InputBtn = styled.input`

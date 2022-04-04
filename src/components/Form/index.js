@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import { userSchema } from '../../Validations/UserFormValidation';
 import 'animate.css';
 
-import { Container, TitleCloseBtn, H1, Div, Input, InputBtn } from './FormElements';
+import { Container, TitleCloseBtn, H1, Div, Label, Input, InputBtn } from './FormElements';
 
 const onSubmit = (data) => {
 	alert(JSON.stringify(data));
@@ -29,7 +29,8 @@ const UserForm = ({ setOpenModal }) => {
 					<Input placeholder='Name' {...register('name')} />
 				</Div>
 				<Div>
-					<Input placeholder='Surname' {...register('surname')} />
+					<Label for='name'>Surname</Label>
+					<Input {...register('surname')} />
 				</Div>
 				<Div>
 					<Input placeholder='Email' {...register('email')} type='email' />
