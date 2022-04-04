@@ -1,11 +1,23 @@
-import UserForm from "./components/Form";
-import "./styles.css";
+import React, { useState } from 'react';
+import UserForm from './components/Form';
+import './App.css';
+import Modal from './components/Modal';
 
 export default function App() {
-  return (
-    <div className="App">
-      <h1>test title</h1>
-      <UserForm />
-    </div>
-  );
+	const [modalOpen, setModalOpen] = useState(false);
+
+	return (
+		<div className='App'>
+			<h1>Formulario con Guille</h1>
+			<button
+				className='openModalBtn'
+				onClick={() => {
+					setModalOpen(true);
+				}}
+			>
+				Click me to open modal form
+			</button>
+			{modalOpen && <Modal setOpenModal={setModalOpen} />}
+		</div>
+	);
 }
