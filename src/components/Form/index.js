@@ -1,4 +1,6 @@
 import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { userSchema } from '../../Validations/UserFormValidation';
 import 'animate.css';
 
 import { Container, TitleCloseBtn, H1, Div, Input, InputBtn } from './FormElements';
